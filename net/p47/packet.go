@@ -5,10 +5,8 @@ import (
 )
 
 type CHandshake struct {
-	Packet
-
-	Version        VarInt
-	Ip             String `packet:"maxLength=255"`
-	Port           Short
-	RequestedState VarInt
+	Version        VarInt `packet:"index=0"`
+	Ip             String `packet:"index=1,maxLength=255"`
+	Port           Short  `packet:"index=2"`
+	RequestedState VarInt `packet:"index=3"`
 }

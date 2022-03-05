@@ -24,4 +24,6 @@ type (
 
 type Packet struct {
 	Id VarInt
+
+	Data any
 }
